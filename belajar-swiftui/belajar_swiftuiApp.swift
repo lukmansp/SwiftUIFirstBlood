@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct belajar_swiftuiApp: App {
+    @State private var modelData = ModelData()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                MainPage()
+                    .environmentObject(modelData)
+            }
         }
     }
 }
